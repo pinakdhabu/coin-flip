@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coin Flip</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        {% if result %}
+            <h1>Coin Flip</h1>
+            <div class="result">{{ result }}</div>
+            <form action="/" method="get">
+                <button type="submit">Flip Again</button>
+            </form>
+        {% endif %}
+    </div>
+
+</body>
+</html>
